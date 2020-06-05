@@ -1,0 +1,5 @@
+# perfSONAR Jessie release repository
+# Repository key is available at http://downloads.perfsonar.net/debian/perfsonar-debian-official.gpg.key
+# wget -qO - http://downloads.perfsonar.net/debian/perfsonar-debian-official.gpg.key | apt-key add -
+deb http://downloads.perfsonar.net/debian/ perfsonar-jessie-release main
+deb-src http://downloads.perfsonar.net/debian/ perfsonar-jessie-release main
