@@ -3,6 +3,20 @@
 This experiment runs multiple http client/server pairs to evaluate how
 contention affects the virtual testbed.
 
+## Creating base.qcow2
+
+Create an image for the VMs to write files to:
+
+```bash
+sudo modprobe nbd 
+qemu-img create -f qcow2 base.qcow2 4g
+sudo qemu-nbd -c /dev/nbd0 base.qcow2
+sudo mkfs.ext4 /dev/nbd0
+sudo qemu-nbd -d /dev/nbd0
+```
+
+This should be copied via the prep scripts to the experiment node(s).
+
 ## Running an experiment
 
 To run an experiment, several things must be set up first:
